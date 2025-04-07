@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -57,6 +56,7 @@
     <section id="contactMe">
         <h4>/contact me</h4>
     </section>
+
     </main>
 </body>
 </html>
