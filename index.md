@@ -1,4 +1,62 @@
----
-title: Welcome to my blog
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Stella">
+    <link rel="stylesheet" href="styles.css">
+    <title>Stella Frøstrup</title>
+</head>
+    <nav>
+        <a href="./index.html">.home</a>
+        <a href="./projects.html">.projects</a>
+        <a href="./about.html">.about</a>
+        <a href="./contact.html">.contact</a>
+    </nav>
+    <header>
+        <h1>stella frøstrup</h1>
+        <p>hello, i am graphic designer and i like communication</p>
+        <div id="heading"></div>
+    </header>
+<body>
+    <main>
+    <div class="portfolio-grid"> <!-- Grid container -->
+        <!-- First item in the grid -->
+        <article>
+            <h3>Title 3</h3>
+            <p>Description of the third item in the portfolio.</p>
+            <img src="./css/images/logoSORTweb.svg" alt="Image 1">
+        </article>
 
+        <!-- Second item in the grid -->
+        <article>
+            <h3>Title 3</h3>
+            <p>Description of the third item in the portfolio.</p>
+            <img src="./css/images/logoSORTweb.svg" alt="Image 2">
+        </article>
+
+        <!-- Third item in the grid -->
+        <article>
+            <h3>Title 3</h3>
+            <p>Description of the third item in the portfolio.</p>
+            <img src="./css/images/logoSORTweb.svg" alt="Image 3">
+        </article>
+
+        <!-- Fourth item in the grid -->
+        <article>
+            <h3>Title 3</h3>
+            <p>Description of the third item in the portfolio.</p>
+            <img src="./css/images/logoSORTweb.svg" alt="Image 4">
+        </article>
+    </div>
+    <section class="myValues">
+        <h2>/values</h2>
+            <article></article>
+            <a href="about.html">Read more</a>
+    </section>
+    <section id="contactMe">
+        <h4>/contact me</h4>
+    </section>
+    </main>
+</body>
+</html>
