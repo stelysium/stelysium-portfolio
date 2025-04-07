@@ -1,0 +1,118 @@
+body{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    font-size:4rem;
+    display: flex;
+    justify-content: flex-end; /* Align the links to the right */
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    padding: 5px;
+    margin-left: 20px; /* Adds spacing between links */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Starts with no underline */
+    height: 2px; /* Thickness of the underline */
+    background-color: transparent; /* Invisible initially */
+    transition: background-color 0.3s ease, width 0.3s ease; /* Smooth transition */
+}
+
+nav a:hover {
+    color: #007bff; /* Change text color on hover */
+}
+
+nav a:hover::after {
+    background-color: #007bff; /* Underline becomes visible on hover */
+    width: 100%; /* Underline grows to full width */
+}
+
+header {
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+    height: 100vh; /* Make the header take the full viewport height */
+    background-image: url('your-image.jpg'); /* Path to your background image */
+    background-size: cover; /* Make the background image cover the entire header */
+    background-position: center; /* Center the background image */
+    text-align: center; /* Align the text in the center */
+    color: rgb(0, 0, 0); /* Set text color to white for better contrast */
+    padding: 0 20px; /* Add some padding on the sides */
+}
+
+header h1,p{
+    margin-bottom:10rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+header p {
+    margin: 10px 10;
+    font-size: 2rem;
+}
+
+h2,h4 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Ensuring the grid layout works properly */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+    gap: 1rem; /* Space between items */
+    padding: 1rem; /* Padding around the grid */
+    width: 100%; /* Grid takes the full width of the container */
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+.portfolio-grid article {
+    background: #f9f9f9;
+    border-radius: 2px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid rgb(50, 50, 61); /* Border around each article for debugging */
+    padding: 1rem;
+}
+
+.portfolio-grid img {
+    width: 100%; /* Images take up full width of their container */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.portfolio-grid article:hover {
+    transform: scale(1.01);
+}
+
+.portfolio-grid p{
+    margin-bottom: 10px;
+}
+.myValues{
+    text-align: center;
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Switch to single column on smaller screens */
+    }
+}
+
