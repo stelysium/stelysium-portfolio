@@ -51,7 +51,7 @@ header {
     text-align: center; /* Align the text in the center */
     color: rgb(0, 0, 0); /* Set text color to white for better contrast */
     padding: 0 20px; /* Add some padding on the sides */
-    background-color: pink;
+    background-color: rgb(255, 223, 242);
 }
 
 header h1,p{
