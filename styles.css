@@ -6,7 +6,7 @@ body{
 nav {
     font-size:4rem;
     display: flex;
-    justify-content: flex-end; /* Align the links to the right */
+    justify-content: flex-end; 
     padding: 10px;
 }
 
@@ -15,8 +15,8 @@ nav a {
     color: #000;
     position: relative;
     padding: 5px;
-    margin-left: 20px; /* Adds spacing between links */
-    transition: color 0.3s ease; /* Smooth transition for text color */
+    margin-left: 3rem; 
+    transition: color 0.3s ease; 
 }
 
 nav a::after {
@@ -93,7 +93,7 @@ h2,h4 {
     border-radius: 2px;
     text-align: center;
     transition: transform 0.3s ease;
-    border: 1px solid rgb(0, 0, 255); /* Border around each article for debugging */
+    border: 1px solid rgb(0, 0, 255);
     padding: 1rem;
 }
 
@@ -110,6 +110,7 @@ h2,h4 {
     margin-bottom: 10px;
 }
 
+/*value section*/
 .myValues, .contactMe{
     padding-left:5rem;
     text-align:left;
@@ -123,6 +124,17 @@ h2,h4 {
 
 }
 
+.valueBtn {
+    font-size: 3rem;
+    color: rgb(239, 218, 255);
+    display:flex;
+    height:fit-content;
+    width:max-content;
+    text-decoration: none;
+    background-color: #ffe3e3;
+}
+
+/**/
 @media (max-width: 768px) {
     .portfolio-grid {
         grid-template-columns: 1fr;
