@@ -50,6 +50,7 @@ header {
     background-position: center; /* Center the background image */
     text-align: center; /* Align the text in the center */
     color: rgb(0, 0, 0); /* Set text color to white for better contrast */
+    background-color:pink;
     padding: 0 20px; /* Add some padding on the sides */
 }
 
