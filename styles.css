@@ -54,7 +54,7 @@ header {
 }
 
 header h1,p{
-    margin-bottom:12rem;
+    margin-bottom:10rem;
 }
 
 header h1 {
@@ -115,3 +115,4 @@ h2,h4 {
         grid-template-columns: 1fr; /* Switch to single column on smaller screens */
     }
 }
+
