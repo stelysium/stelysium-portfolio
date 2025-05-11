@@ -6,7 +6,7 @@ body{
 nav {
     font-size:4rem;
     display: flex;
-    justify-content: flex-end; /* Align the links to the right */
+    justify-content: flex-end; 
     padding: 10px;
 }
 
@@ -15,8 +15,8 @@ nav a {
     color: #261f3a;
     position: relative;
     padding: 5px;
-    margin-left: 20px; /* Adds spacing between links */
-    transition: color 0.3s ease; /* Smooth transition for text color */
+    margin-left: 3rem; 
+    transition: color 0.3s ease; 
 }
 
 nav a::after {
@@ -72,19 +72,21 @@ header p {
 }
 
 h2,h4 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
+    font-size: 5rem;
+    font-weight:200;
+    text-align: left;
+    letter-spacing:5%;
+
 }
 
-/* Ensuring the grid layout works properly */
+
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
-    gap: 1rem; /* Space between items */
-    padding: 1rem; /* Padding around the grid */
-    width: 100%; /* Grid takes the full width of the container */
-    box-sizing: border-box; /* Includes padding in width calculation */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem; 
+    padding: 1rem; 
+    width: 100%;
+    box-sizing: border-box; 
 }
 
 .portfolio-grid article {
@@ -92,13 +94,13 @@ h2,h4 {
     border-radius: 2px;
     text-align: center;
     transition: transform 0.3s ease;
-    border: 1px solid rgb(50, 50, 61); /* Border around each article for debugging */
+    border: 1px solid rgb(0, 0, 255);
     padding: 1rem;
 }
 
 .portfolio-grid img {
-    width: 100%; /* Images take up full width of their container */
-    height: auto; /* Maintain the aspect ratio */
+    width: 100%; 
+    height: auto; 
 }
 
 .portfolio-grid article:hover {
@@ -108,13 +110,35 @@ h2,h4 {
 .portfolio-grid p{
     margin-bottom: 10px;
 }
-.myValues{
-    text-align: center;
+
+/*value section*/
+.myValues, .contactMe{
+    padding-left:5rem;
+    text-align:left;
+    height: 580px;
+
 }
-/* Mobile responsiveness */
+.myValues article{
+    padding-left:5rem;
+    text-align:left;
+    height: 580px;
+
+}
+
+.valueBtn {
+    font-size: 3rem;
+    color: rgb(239, 218, 255);
+    display:flex;
+    height:fit-content;
+    width:max-content;
+    text-decoration: none;
+    background-color: #ffe3e3;
+}
+
+/**/
 @media (max-width: 768px) {
     .portfolio-grid {
-        grid-template-columns: 1fr; /* Switch to single column on smaller screens */
+        grid-template-columns: 1fr;
     }
 }
 
