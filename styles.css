@@ -3,11 +3,18 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.logo-container img{
+    width:100px;
+    height:100%;
+}
+
 nav {
-    font-size:4rem;
+    font-size:1.5rem;
     display: flex;
-    justify-content: flex-end; 
-    padding: 10px;
+    justify-content: center; /* centers items horizontally */
+    align-items: center;     /* centers items vertically (optional) */
+    gap: 2rem;               /* space between links */
+    padding: 1rem;
 }
 
 nav a {
@@ -31,11 +38,11 @@ nav a::after {
 }
 
 nav a:hover {
-    color: #3700ff; /* Change text color on hover */
+    color: #4f5bff; /* Change text color on hover */
 }
 
 nav a:hover::after {
-    background-color: #007bff; /* Underline becomes visible on hover */
+    background-color: #ff0077; /* Underline becomes visible on hover */
     width: 100%; /* Underline grows to full width */
 }
 
@@ -51,7 +58,7 @@ header {
     text-align: center; /* Align the text in the center */
     color: rgb(0, 0, 0); /* Set text color to white for better contrast */
     padding: 0 20px; /* Add some padding on the sides */
-    background-color: rgb(255, 230, 245);
+    background-color: rgb(216, 216, 216);
 }
 
 header h1,p{
@@ -61,30 +68,35 @@ header h1,p{
 
 header h1 {
     margin: 0;
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: 5px;
     text-transform: uppercase;
 }
 
 header p {
     margin: 10px 10;
-    font-size: 2rem;
+    font-size: 1.3rem;
 }
 
 h2,h4 {
-    font-size: 5rem;
+    font-size: 2rem;
     font-weight:200;
     text-align: left;
     letter-spacing:5%;
 
 }
 
+h3{
+    font-size: 1rem;
+    letter-spacing:10%;
+}
+
 
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
-    gap: 1rem; 
-    padding: 1rem; 
+    gap: 4rem; 
+    padding: 4rem; 
     width: 100%;
     box-sizing: border-box; 
 }
@@ -94,21 +106,48 @@ h2,h4 {
     border-radius: 2px;
     text-align: center;
     transition: transform 0.3s ease;
-    border: 1px solid rgb(0, 0, 255);
+    border: 1px solid #ff0077;
     padding: 1rem;
 }
 
 .portfolio-grid img {
-    width: 100%; 
+    width: 100%;
     height: auto; 
 }
 
 .portfolio-grid article:hover {
-    transform: scale(1.01);
+    transform: scale(1.05);
 }
 
 .portfolio-grid p{
     margin-bottom: 10px;
+}
+
+.image-container {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Change to 1 / 1, 16 / 9, etc. depending on what you want */
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%);
+    transition: filter 1s ease;
+}
+
+.portfolio-grid article:hover img {
+    filter: grayscale(0%);
 }
 
 /*value section*/
@@ -119,22 +158,31 @@ h2,h4 {
 
 }
 .myValues article{
-    padding-left:5rem;
+    padding-left:1rem;
     text-align:left;
     height: 580px;
+    font-size: 1rem;
 
+}
+
+.myValues article li{
+    padding:0.5rem;
 }
 
 .valueBtn {
-    font-size: 3rem;
-    color: rgb(239, 218, 255);
+    font-size: 2rem;
     display:flex;
     height:fit-content;
     width:max-content;
-    text-decoration: none;
-    background-color: #ffe3e3;
+    background-color: #000000;
+    margin:left;
+    margin-top:2rem;
 }
 
+.valueBtn a{
+    color:#f9f9f9;
+    text-decoration: none;
+}
 /**/
 @media (max-width: 768px) {
     .portfolio-grid {
