@@ -5,11 +5,12 @@ body{
 
 .logo-container img{
     width:100%;
-    height:100%;
+    height:auto;
+    
 }
 
 nav {
-    font-size:1.5rem;
+    font-size: 1.5rem;
     display: flex;
     justify-content: center; /* centers items horizontally */
     align-items: center;     /* centers items vertically (optional) */
@@ -23,7 +24,7 @@ nav a {
     position: relative;
     padding: 5px;
     margin-left: 3rem; 
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
 }
 
 nav a::after {
