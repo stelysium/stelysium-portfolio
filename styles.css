@@ -38,15 +38,16 @@ nav a::after {
 }
 
 nav a:hover {
-    color: #0004ff; /* Change text color on hover */
+    color: #000000; /* Change text color on hover */
 }
 
 nav a:hover::after {
-    background-color: #b60055; /* Underline becomes visible on hover */
+    background-color: #ff0077; /* Underline becomes visible on hover */
     width: 100%; /* Underline grows to full width */
 }
 
 header {
+    position:relative;
     display: flex;
     flex-direction: column; /* Stack the content vertically */
     justify-content: center; /* Center the content vertically */
@@ -61,6 +62,25 @@ header {
     background-color: rgb(216, 216, 216);
 }
 
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+    z-index: 0;
+}
+
+header h1, header p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+header > * {
+    position: relative;
+    z-index: 1;
+}
+
 header h1,p{
     margin-bottom: 200px;
     text-decoration: dotted;
@@ -68,7 +88,7 @@ header h1,p{
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
     letter-spacing: 5px;
     text-transform: uppercase;
 }
@@ -76,6 +96,14 @@ header h1 {
 header p {
     margin: 10px 10;
     font-size: 1.3rem;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 h2,h4 {
@@ -87,8 +115,8 @@ h2,h4 {
 }
 
 h3{
-    font-size: 1rem;
-    letter-spacing:10%;
+    font-size: 1.5rem;
+    letter-spacing:3px;
 }
 
 
@@ -105,7 +133,7 @@ h3{
     background: #000000;
     border-radius: 2px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
     border: 1px solid #000000;
     padding: 1rem;
     color:white;
@@ -122,36 +150,6 @@ h3{
 
 .portfolio-grid p{
     margin-bottom: 10px;
-}
-
-.arrow-link {
-    display: inline-block;
-    margin-top: 1rem;
-    text-decoration: none;
-    color: white;
-    font-size: 1.5rem;
-    position: relative;
-    transition: transform 0.3s ease;
-    overflow: hidden;
-
-}
-
-article:hover .arrow-link {
-    transform: translateX(8px); /* slide to the right */
-}
-
-.arrow-link::after {
-    content: "";
-    display: block;
-    width: 0%;
-    height: 2px;
-    background: white;
-    transition: width 0.3s ease;
-    margin-top: 4px;
-}
-
-article:hover .arrow-link::after {
-    width: 100%;
 }
 
 .image-container {
