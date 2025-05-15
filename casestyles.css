@@ -221,10 +221,8 @@ header p {
 /* Article Styling */
 .portfolio-grid article {
     background: black;
-    border-radius: 8px; /* Slightly more rounded corners */
     text-align: center;
     transition: transform 0.3s ease;
-    border: 1px solid black;
     padding: 1rem;
     color: white;
 }
@@ -235,7 +233,6 @@ header p {
     width: 100%;
     aspect-ratio: 16 / 9; /* Keep the aspect ratio for smaller images */
     overflow: hidden;
-    border-radius: 2px;
 }
 
 /* Images should be smaller */

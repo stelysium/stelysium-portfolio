@@ -120,6 +120,7 @@ header {
     color: white;
     padding: 0 20px;
     background-color: rgb(216, 216, 216);
+
 }
 
 header::before {
@@ -209,8 +210,12 @@ h3::after {
     text-align: center;
     transition: transform 0.5s ease;
     border: 1px solid black;
-    padding: 1rem;
+    padding: 2rem;
     color: white;
+}
+
+.portfolio-grid p{
+    padding:2rem;
 }
 
 .portfolio-grid img {
