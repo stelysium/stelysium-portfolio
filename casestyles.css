@@ -1,5 +1,5 @@
 body{
-    color: #261f3a;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -20,7 +20,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #261f3a;
+    color: black;
     position: relative;
     padding: 5px;
     margin-left: 3rem; 
@@ -39,7 +39,7 @@ nav a::after {
 }
 
 nav a:hover {
-    color: #000000; /* Change text color on hover */
+    color: black; /* Change text color on hover */
 }
 
 nav a:hover::after {
@@ -50,7 +50,7 @@ nav a:hover::after {
 /* Ensure nav <a> links stay styled consistently */
 .nav-link {
   text-decoration: none;
-  color: #261f3a;
+  color:black;
   position: relative;
   padding: 5px;
   margin-left: 3rem;
@@ -70,7 +70,7 @@ nav a:hover::after {
 }
 
 .nav-link:hover {
-  color: #000000;
+  color: black;
 }
 
 .nav-link:hover::after {
@@ -85,7 +85,7 @@ nav a:hover::after {
 
 .dropdown-trigger {
   cursor: pointer;
-  color: #261f3a;
+  color: black;
   position: relative;
   padding: 5px;
   margin-left: 3rem;
@@ -106,7 +106,7 @@ nav a:hover::after {
 }
 
 .dropdown:hover .dropdown-trigger {
-  color: #000000;
+  color: black;
 }
 
 .dropdown:hover .dropdown-trigger::after {
@@ -137,7 +137,7 @@ nav a:hover::after {
   display: block;
   text-decoration: none;
   font-size: 1.2rem;
-  color: #261f3a;
+  color: black;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -220,11 +220,11 @@ header p {
 
 /* Article Styling */
 .portfolio-grid article {
-    background: #000000;
+    background: black;
     border-radius: 8px; /* Slightly more rounded corners */
     text-align: center;
     transition: transform 0.3s ease;
-    border: 1px solid #000000;
+    border: 1px solid black;
     padding: 1rem;
     color: white;
 }

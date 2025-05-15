@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Author" content="Stella">
     <link rel="stylesheet" href="styles.css">
-    <title>Stella Frøstrup</title>
+    <title>stelysium</title>
 </head>        
     <nav>
         <div class="logo-container">
@@ -23,9 +23,11 @@
         <a href="./contact.html">○ contact</a>
     </nav>
     <header>
-        <h1>stella frøstrup</h1>
-        <p>hello, i am graphic designer and i like communication</p>
-        <div id="heading"></div>
+    <div class="container">
+        <h1>Stelysium</h1>
+        <p class="stelysiumDesc">(noun) /stəˈliː.zi.əm/ - ste-ly-si-um </p>
+        <p>s t e l y s i u m · projects created in a great state of bliss</p>
+    </div>
     </header>
 <body>
     <main>
@@ -42,7 +44,9 @@
             <h3>"sejr  & davidsen"</h3>
             <p>pet adoption, training & care</p>
             <div class="image-container">
+                <a href="">
                 <img src="./css/images/SDcrop.jpg" alt="S&D">
+                </a>
             </div>
             <a href="./projects.html" class="arrow-link"></a>
         </article>
@@ -103,5 +107,24 @@
         </article>
     </section>
     </main>
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <p>© 2025 Stelysium. All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+            <a href="https://www.instagram.com/" target="_blank">instagram</a>
+            <a href="mailto:your@email.com">stelysium@gmail.com</a>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("nav a");
+    links.forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
 </body>
 </html>
