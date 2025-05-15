@@ -146,14 +146,13 @@ nav a:hover::after {
   color: #ff0077;
 }
 
-
 header {
     position:relative;
     display: flex;
     flex-direction: column; /* Stack the content vertically */
     justify-content: center; /* Center the content vertically */
     align-items: center; /* Center the content horizontally */
-    height: 600px; /* Make the header take the full viewport height */
+    height: 250px; /* Make the header take the full viewport height */
     background-image: url('./css/images/HEADER.jpg'); /* Path to your background image */
     background-size: cover; /* Make the background image cover the entire header */
     background-position: center; /* Center the background image */
@@ -183,7 +182,7 @@ header > * {
 }
 
 header h1,p{
-    margin-bottom: 200px;
+    margin:1rem;
     text-decoration: dotted;
 }
 
@@ -207,189 +206,106 @@ header p {
     }
 }
 
-h2,h4 {
-    font-size: 3rem;
-    font-weight:200;
-    text-align: left;
-    letter-spacing:5%;
-
-}
-
-h3{
-    font-size: 3rem;
-    letter-spacing:3px;
-}
-
-
+/* Portfolio Grid - Projects Page */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 4rem; 
-    padding: 4rem; 
+    grid-template-columns: repeat(3, 1fr); /* Use 3 columns for a cleaner layout */
+    gap: 2rem; /* Reduced gap to make it more compact */
+    padding: 2rem; /* Adjust padding */
     width: 100%;
     box-sizing: border-box; 
+    max-width: 1200px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the grid */
 }
 
+/* Article Styling */
 .portfolio-grid article {
     background: #000000;
-    border-radius: 2px;
+    border-radius: 8px; /* Slightly more rounded corners */
     text-align: center;
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
     border: 1px solid #000000;
     padding: 1rem;
-    color:white;
+    color: white;
 }
 
-.portfolio-grid img {
-    width: 100%;
-    height: auto; 
-}
-
-.portfolio-grid article:hover {
-    transform: scale(1.05);
-}
-
-.portfolio-grid p{
-    margin-bottom: 10px;
-}
-
+/* Image Container (Smaller size) */
 .image-container {
-    margin-top: 2.5rem;
+    margin-top: 1rem;
     width: 100%;
-    aspect-ratio: 1 / 1; /* Change to 1 / 1, 16 / 9, etc. depending on what you want */
+    aspect-ratio: 16 / 9; /* Keep the aspect ratio for smaller images */
     overflow: hidden;
     border-radius: 2px;
 }
 
+/* Images should be smaller */
 .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
     filter: grayscale(100%);
-    transition: filter 1s ease;
+    transition: filter 0.5s ease;
 }
 
+/* Hover effect for images */
+.portfolio-grid article:hover {
+    transform: scale(1.03); /* Slightly subtle hover effect */
+}
+
+/* Image hover effect */
 .portfolio-grid article:hover img {
-    filter: grayscale(0%);
+    filter: grayscale(0%); /* Colorize the image on hover */
 }
 
-h3 {
-    font-size: 1.5rem;
-    letter-spacing: 3px;
-    position: relative;
-    display: inline-block;
-    transition: all 0.3s ease;
-    color: white;
+/* Paragraph (Reduced margin for simpler look) */
+.portfolio-grid p {
+    margin-bottom: 5px;
+    font-size: 0.9rem; /* Smaller text for descriptions */
+    color: #b0b0b0; /* Lighter color for text */
 }
 
-/* Underline effect */
-h3::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -15px;
-    width: 100%;
-    height: 2px;
-    background-color: #ff00aa; /* Change to your accent color */
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-}
-
-/* Hovering the whole article triggers h3 effect */
-.portfolio-grid article:hover h3 {
-    color: #ffffff;
-    transform: scale(1.05);
-}
-
-.portfolio-grid article:hover h3::after {
-    transform: scaleX(1);
-}
-
-
-/*value section*/
-.myValues {
-    display: flex;
-    justify-content:first baseline; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    flex-wrap: wrap; /* Allow the content to wrap if the screen is smaller */
-    color: #ffffff;
-    background-color: #000000;
-    margin-left: 4rem;
-    font-size: 1rem;
-    padding: 5rem;
-    height: 500px;
-    width: 84.7%;
-}
-
-.myValues h2{
-    display: block;
-    position: relative;
-    text-align: left;
-}
-
-.content-wrapper {
-    margin-left:3rem;
-    display:flex;  
-    width: 100%; /* Take up full width */
-}
-
-.myValues article {
-    flex: 1;
-    margin-left: 1rem; /* Space between image and text */
-    margin-top: 1rem;
-}
-
-.myValues article ul {
-    list-style: none;
-    padding: 0;
-}
-
-.myValues article li {
-    padding: 1rem;
-    position: relative;
-}
-
-.valueBtn {
+/* Article Titles (Styling adjusted for a cleaner look) */
+.portfolio-grid h3 {
     font-size: 1.2rem;
-    display: flex;
-    height: fit-content;
-    width: max-content;
-    background-color: #ffffff;
-    margin-top: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-bottom: 10px;
 }
 
-.valueBtn a {
-    color: #000000;
-    text-decoration: none;
-    padding: 1rem;
+/* Optional: Add a simple hover effect to the title */
+.portfolio-grid article:hover h3 {
+    color: #ff0077; /* Accent color for hover */
 }
 
-.myValues .image-container2 {
-    display:flex;
+/* Link Styling (Arrow icon) */
+.arrow-link {
     position: absolute;
-    margin-left: 40%;
-    flex-shrink: 0; /* Prevent shrinking */
-    width: 500px; /* Adjust the image size here */
-    height:60%;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
 }
 
-.myValues .image-container2 img {
-    width: 100%; /* Make the image fill the container */
-    height: auto; /* Maintain the image's aspect ratio */
-}
-
-.contactMe{
-    color:rgb(0, 0, 0);
-    margin-left: 8rem;
-}
-
-
-/**/
+/* Responsive Design - Adjust for smaller screens */
 @media (max-width: 768px) {
     .portfolio-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+    
+    .portfolio-grid article {
+        padding: 1rem;
+    }
+
+    .portfolio-grid h3 {
+        font-size: 1rem; /* Smaller title size */
+    }
+    
+    .portfolio-grid p {
+        font-size: 0.8rem; /* Smaller description font */
     }
 }
-
