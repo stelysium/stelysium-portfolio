@@ -1,13 +1,21 @@
+/* GLOBAL RESET AND BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.logo-container img{
-    width:100%;
-    height:auto;
-    
+.logo-container img {
+    height: 60px;  /* Adjust based on what looked good before */
+    width: auto;
+    display: block;
 }
+
 
 nav {
     font-size: 1.5rem;
@@ -16,6 +24,7 @@ nav {
     align-items: center;     /* centers items vertically (optional) */
     gap: 2rem;               /* space between links */
     padding: 1rem;
+    min-height: 80px;
 }
 
 nav a {
@@ -153,7 +162,7 @@ header {
     justify-content: center; /* Center the content vertically */
     align-items: center; /* Center the content horizontally */
     height: 250px; /* Make the header take the full viewport height */
-    background-image: url('./css/images/HEADER.jpg'); /* Path to your background image */
+    background-image: url('./css/images/casesHEADER.jpg'); /* Path to your background image */
     background-size: cover; /* Make the background image cover the entire header */
     background-position: center; /* Center the background image */
     text-align: center; /* Align the text in the center */
